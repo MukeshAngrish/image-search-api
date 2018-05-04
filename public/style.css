@@ -1,0 +1,42 @@
+/* styles */
+/* called by your view template */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #ECEDEF;
+}
+
+h1, h3 {
+  font-style: italic;
+  color: #373fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+.code {
+  background-color: #FFFFFF;
+  padding: 3px;
+}
+.align {
+  margin-left: 35px;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  width: 600px;
+  margin: 20px auto;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+
+li {
+  margin-bottom: 5px;
+}
