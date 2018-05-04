@@ -1,0 +1,121 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Glitch!</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>
+      API Project: Image Search Abstraction Layer
+    </h1>
+    
+    <main>
+      <h3>
+        User Stories:
+      </h3>
+      <ol>
+        <li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+        <li>I can paginate through the responses by adding a <span>?offset=2</span> parameter to the URL.</li>
+        <li>I can get a list of the most recently submitted search strings.</li>
+      </ol>
+      
+      <h3>
+        Example Input:
+      </h3>
+      <ol class="code align">
+        <li><a href="https://searchy.glitch.me/api/imagesearch/what" target="_blank">
+        https://searchy.glitch.me/api/imagesearch/what
+        </a></li>
+        <li><a href="https://searchy.glitch.me/api/imagesearch/what?offset=2" target="_blank">
+        https://searchy.glitch.me/api/imagesearch/what?offset=2
+        </a></li>
+         <li><a href="https://searchy.glitch.me/api/recent" target="_blank">
+        https://searchy.glitch.me/api/recent
+        </a></li>
+      </ol>
+      
+      <h3>
+        Example Output:
+      </h3>
+      <ol>
+        <li><pre class="code">
+[
+  {
+    "type": "image/png",
+    "width": 586,
+    "height": 584,
+    "size": 628284,
+    "url": "https://media.tenor.com/images/2fb17890d05e9521a30d3970264c2fe6/tenor.png",
+    "thumbnail": {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDpdARN0X0TGpACpfl99cIn1_Y36YHN1ViLxFErxTZDHe5tHRM1WHTr2SF",
+      "width": 135,
+      "height": 135
+    },
+    "description": "What GIFs | Tenor",
+    "parentPage": "https://tenor.com/search/what-gifs"
+  },
+  ...
+]
+        </pre></li>
+        <li><pre class="code">
+[
+  {
+    "type": "image/png",
+    "width": 600,
+    "height": 491,
+    "size": 24907,
+    "url": "http://www.workfromhomechristians.com.au/wp-content/uploads/2012/09/what-are-social-entrepreneurs-2.png",
+    "thumbnail": {
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRDH3rUSe5Kq4koPNUlSVrj7LvESD-511NBaTQl3uASNcjHdhYUjIT3l8",
+      "width": 135,
+      "height": 110
+    },
+    "description": "Are Social Entrepreneurs",
+    "parentPage": "https://www.workfromhomechristians.com.au/what-are-social-entrepreneurs/"
+  },
+  ...
+]
+        </pre></li>
+        
+        <li><pre class="code">
+[
+  {
+    "_id": "5aec35fd8408d80b00107e17",
+    "term": "what",
+    "time": "2018-05-04T10:29:17.769Z",
+    "__v": 0
+  },
+  ...
+]
+        </pre></li>
+      </ol>
+      
+    </main>
+    
+    <footer>
+      Made by <a href="https://www.freecodecamp.org/mukeshangrish" target="_blank">Mukesh K. Angrish</a>
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
